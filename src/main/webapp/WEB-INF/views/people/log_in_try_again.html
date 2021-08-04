@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+</head>
+<body>
+<table style="border-collapse: collapse; text-align:center;margin-left: 40%;
+    margin-top: 50px;width:500px" border="0">
+    <tbody>
+    <tr>
+        <td style="width: 100%;">
+            <center>
+                <div style="padding: 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 350px;
+    height: fit-content;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;
+    background-color: #ff9800;">Log in</div>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100%;padding-top:60px">
+            <form th:method="POST" th:action="@{/people/login}" th:object="${person}">
+                <p style="
+                font-size: 14px;
+                font-family: system-ui;
+                text-transform: uppercase;
+                font-weight: bold;
+                color:red;">no such user exists, please try again</p>
+                <label for="name" style="
+                font-size: 14px;
+                font-family: system-ui;
+                text-transform: uppercase;
+                font-weight: bold;">Enter name of user : </label>
+                <input type="text" th:field="*{name}" id="name"/>
+                <br/>
+                <br/>
+                <label for="password" style="
+                font-size: 14px;
+                font-family: system-ui;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding-top:20px;">Enter password of user : </label>
+                <input type="text" th:field="*{password}" id="password"/>
+                <input type="submit" value="log in" style="
+                margin-top: 35px;
+                padding: 10px 15px 10px 15px;
+                border: 2px solid black;
+                border-radius: 6px;
+                width: 136px;
+                height: fit-content;
+                font-size: 17px;
+                font-weight: bold;
+                font-family: system-ui;
+                text-transform: uppercase;
+                background-color: white;
+                cursor: pointer;
+                color: indigo;"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100%; padding-top:15px">
+            <center>
+                <a href="/index" style="text-decoration: none">
+                    <div style="padding: 10px 15px 10px 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 100px;
+    height: fit-content;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;">Back</div>
+                </a>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

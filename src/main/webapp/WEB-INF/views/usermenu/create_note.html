@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new note</title>
+</head>
+<body>
+<table style="border-collapse: collapse; text-align:center;margin-left: 40%;
+    margin-top: 50px;width:500px" border="0">
+    <tbody>
+    <tr>
+        <td style="width: 100%;">
+            <center>
+                <div style="padding: 15px;
+                border: 2px solid black;
+                border-radius: 6px;
+                width: 350px;
+                height: fit-content;
+                font-size: 24px;
+                font-weight: bold;
+                font-family: system-ui;
+                text-transform: uppercase;
+                background-color: #ff9800;">Create note: <div th:text="${person.getName()}">user</div></div>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100%; padding-top:60px">
+            <center>
+                <form th:method="POST" th:action="@{/notes/create-user-note}" th:object="${person}">
+                    <label for="note" style="
+                font-size: 14px;
+                font-family: system-ui;
+                text-transform: uppercase;
+                font-weight: bold;">Enter text of new note : </label>
+                    <textarea type="text" th:field="*{note}" id="note" cols="63" rows = "5" style="resize: none;padding: 10px;"></textarea>
+                    <br/>
+                    <input type="submit" value="create note" style="
+                margin-top: 35px;
+                padding: 10px 15px 10px 15px;
+                border: 2px solid black;
+                border-radius: 6px;
+                width: 136px;
+                height: fit-content;
+                font-size: 17px;
+                font-weight: bold;
+                font-family: system-ui;
+                text-transform: uppercase;
+                background-color: white;
+                cursor: pointer;
+                color: indigo;"/>
+                </form>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100%; padding-top:15px">
+            <center>
+                <a href="/user-menu" style="text-decoration: none">
+                    <div style="
+                    padding: 10px 15px 10px 15px;
+                    border: 2px solid black;
+                    border-radius: 6px;
+                    width: 100px;
+                    height: fit-content;
+                    font-size: 17px;
+                    font-weight: bold;
+                    font-family: system-ui;
+                    text-transform: uppercase;">back</div>
+                </a>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

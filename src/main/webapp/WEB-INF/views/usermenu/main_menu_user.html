@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+</head>
+<body>
+<table style="border-collapse: collapse; text-align:center;margin-left: 40%;
+    margin-top: 50px;width:500px" border="0">
+    <tbody>
+    <tr>
+        <td style="width: 100%;">
+            <center>
+                <div style="padding: 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 350px;
+    height: fit-content;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;
+    background-color: #ff9800;">user menu: <div th:text="${person.getName()}">user</div></div>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100%; padding-top:60px">
+            <center>
+                <a href="/notes/show-notes" style="text-decoration: none">
+                    <div style="padding: 10px 15px 10px 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 100px;
+    height: fit-content;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;">show notes</div>
+                </a>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100%; padding-top:15px">
+            <center>
+                <a href="/notes/create-note" style="text-decoration: none">
+                    <div style="padding: 10px 15px 10px 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 100px;
+    height: fit-content;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;">create notes</div>
+                </a>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100%; padding-top:15px">
+            <center>
+                <a href="/index" style="text-decoration: none">
+                    <div style="padding: 10px 15px 10px 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 100px;
+    height: fit-content;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: system-ui;
+    text-transform: uppercase;">Log out</div>
+                </a>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

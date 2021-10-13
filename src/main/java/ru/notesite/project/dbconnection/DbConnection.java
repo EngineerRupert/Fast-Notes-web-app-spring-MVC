@@ -18,7 +18,7 @@ public class DbConnection {
         return DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/fastnotes",
                 "postgres",
-                "1106935");
+                "xxx");
     }
 
 }
